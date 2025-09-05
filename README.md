@@ -1,7 +1,7 @@
 # How to run USC MGC pipelines and scripts
 
 ## Quick Links
-- [Pipeline tutorials](#pipeline-tutorials)
+- [Pipeline tutorials](./pipeline_tutorials/README.md)
 - [Other tutorials](#other-tutorials)
 
 ## Description

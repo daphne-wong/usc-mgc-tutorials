@@ -1,4 +1,4 @@
-# How to run the cellranger pipeline
+# Cellranger pipeline
 
 ## Overview
 
@@ -114,7 +114,7 @@ sbatch --array=1-5 cellranger.slurm
 - Each sample will have their own job, like so:
 
 
-![](images/cellranger_queue.png)
+![](../images/cellranger_queue.png)
 - If you want to cancel any of the SLURM jobs, use `scancel`
 
 ```
