@@ -1,7 +1,7 @@
 # How to run USC MGC pipelines and scripts
 
 ## Quick Links
-- [Pipeline tutorials](./pipeline_tutorials/README.md)
+- [Pipeline tutorials](/pipeline_tutorials/README.md)
 - [Other tutorials](#other-tutorials)
 
 ## Description
@@ -67,14 +67,14 @@ These cover miscellaneous commands or standalone scripts used in conjunction wit
 | ------------ | ------------ | ------------ |
 | **basespace** | Illumina Basespace| [basespace] |
 | **aws-cli** | Amazon Web Services (AWS) | [aws-script] |
-| **scp-transfer** | Local machine (scp)| [scp-transfer](file_transfer/scp_transfer.md) |
+| **scp-transfer** | Local machine (scp)| [scp-transfer](/other_tutorials/file_transfers.md) |
 | **10x-cli** | 10X Cloud Analysis | [10x-cli]() |
 
-### Miscellaneous Notes$
+### Miscellaneous Notes
 | Script | Contents | Link |
 | ------------ | ------------ | ------------ |
-| **mgc-locations** | Commonly used locations | [mgc-locations](/misc_notes/mgc-locations.md) |
-| **hpc-notes** | Commonly used commands | [hpc-notes](/misc_notes/hpc-linux-notes.md) |
+| **mgc-locations** | Commonly used locations | [mgc-locations](/other_tutorials/mgc-locations.md) |
+| **hpc-notes** | Commonly used commands | [hpc-notes](/other_tutorials/hpc-linux-notes.md) |
 
 
 
