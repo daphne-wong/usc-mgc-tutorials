@@ -13,7 +13,7 @@ To see tutorials for other pipelines, see here: [choosing the correct pipeline](
 
 ## Step 1. Set up project directory
 
-**Set up the project directory within the `singleCell` directory.**
+**1. Set up the project directory within the `singleCell` directory.**
 
 - General naming convention: [PI_last_name]\_[analysis type]_[date]
 
@@ -23,7 +23,7 @@ cd /project2/weisenbe_1344/MGC/singleCell
 mkdir Wong_GEX_20250904
 ```
 
-**Within the project directory, create the following folders:**
+**2. Within the project directory, create the following folders:**
 
 ```
 cd /project2/weisenbe_1344/MGC/singleCell/Wong_GEX_20250904
@@ -33,7 +33,7 @@ mkdir fastq run1
 
 ## Step 2. Download FASTQ files from source
 
-From [Illumina's Basespace]()
+From [Illumina Basespace](../other_tutorials/file_transfers.md#basespace-overview)
 
 From [AWS]()
 
@@ -44,7 +44,7 @@ From [local machine]()
 
 Each cellranger run has three required files: `cellranger.slurm`, `config_cellranger.txt`, and `samplesheet.txt`.
 
-**Copy the files from the scripts folder.**
+**1. Copy the files from the scripts folder.**
 
 ```
 cd /project2/weisenbe_1344/MGC/singleCell/Wong_GEX_20250904/run1
@@ -53,10 +53,8 @@ cd /project2/weisenbe_1344/MGC/singleCell/Wong_GEX_20250904/run1
 cp /project2/weisenbe_1344/scripts/experiments/cellranger/* .
 ```
 
-**Re-write the samplesheet (pulls sample names from fastq file names).**
+**2. Re-write the samplesheet (pulls sample names from fastq file names).**
 - Change `-f1-4` based on number of underscores in fastq sample name before L001_R1_001
-
-
 - EXAMPLES:
    - For `350_L001_R1_001.fastq.gz`, change command to `-f1` because there is one underscore "\_" before L001_R1_001
    - For `R54_S28_L001_R2_001.fastq.gz`, change command to `-f1-2` because there are two underscores "\_"
@@ -69,11 +67,10 @@ cp /project2/weisenbe_1344/scripts/experiments/cellranger/* .
 for file in ../fastq/*.fastq.gz; do basename "$file" | cut -d'_' -f1-4; done | sort -u > samplesheet.txt
 ```
 
-**Edit config file**- 
+**3. Edit config file**- 
 - Replace `FILE` variable with the correct path to samplesheet
 - Replace `FASTQ` variable with the correct path to fastq directory
-
-*_Note_: If analysing mouse data, change `REFER` variable to the mouse reference: `/project2/weisenbe_1344/MGC/resources/singlecell/refdata-gex-GRCm39-2024-A`. 
+- If analysing mouse data, change `REFER` variable to the mouse reference: `/project2/weisenbe_1344/MGC/resources/singlecell/refdata-gex-GRCm39-2024-A`. 
 ```
 FILE="/project2/weisenbe_1344/MGC/singleCell/Wong_GEX_20250904/run1/samplesheet.txt"
 
@@ -89,8 +86,7 @@ MEM="64"
 **Edit slurm script**
 - Change the slurm header `#SBATCH --array` option with the correct number of samples
 - Replace the `SOURCE` path to the config_cellranger.txt file 
-
-*_Note_: Check that the slurm script is billed to the correct account (`#SBATCH --account=weisenbe_1344`).
+- _Note_: Verify the slurm script is billed to the correct account (`#SBATCH --account=weisenbe_1344`).
 
 ```
 #SBATCH --array=1-5
@@ -99,7 +95,7 @@ source /project2/weisenbe_1344/MGC/singleCell/Wong_GEX_20250904/run1/config_cell
 ```
 
 ## Step 4. Run the script
-**Submit the job to SLURM**
+**1. Submit the job to SLURM**
 - Replace the "5" with the number of samples in the project
 - The number of samples should match the number of lines in your samplesheet (`wc -l samplesheet.txt`)
 
@@ -107,7 +103,7 @@ source /project2/weisenbe_1344/MGC/singleCell/Wong_GEX_20250904/run1/config_cell
 
 sbatch --array=1-5 cellranger.slurm
 ```
-**Check on the status of your run**
+**2. Check on the status of your run**
 - Run `myqueue` to check on all of your current SLURM jobs
   - It may take some time for the job to start (PENDING > STARTED) depending on how busy the queue is and how many resources you are requesting.
 
