@@ -1,4 +1,8 @@
-# Tutorials on how to run USC MGC pipelines and scripts
+# How to run USC MGC pipelines and scripts
+
+## Quick Links
+- [Pipeline tutorials](#pipeline-tutorials)
+- [Other tutorials](#other-tutorials)
 
 ## Description
 
@@ -66,7 +70,7 @@ These cover miscellaneous commands or standalone scripts used in conjunction wit
 | **ssh-transfer** | Local machine (ssh)| [ssh-transfer]() |
 | **10x-cli** | 10X Cloud Analysis | [10x-cli]() |
 
-### Miscellaneous Notes
+### Miscellaneous Notes$
 | Script | Contents | Link |
 | ------------ | ------------ | ------------ |
 | **mgc-locations** | Commonly used locations | [mgc-locations](/misc_notes/mgc-locations.md) |
