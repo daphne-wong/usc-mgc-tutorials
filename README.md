@@ -43,7 +43,7 @@ The tutorials are a step-by-step on how to run these scripts via the terminal. T
    Connect via: `ssh [USERNAME]@discovery.usc.edu`
 
 
-### Pipeline Tutorials
+## Pipeline Tutorials
 
 Choose the correct pipeline based on the type of data you are analysing.
 
@@ -52,12 +52,12 @@ Here are all the pipelines currently being run at USC Molecular Genomics Core:
 | Pipeline | Data Type | Recommended Use Case | Tutorial Link |
 | ------------ | ------------ | ------------ | ------------ |
 | **cellranger** | GEX only     | Single-cell RNA-seq (gene expression) | [cellranger](./pipeline_tutorials/cellranger.md) |
-| **cellranger-vdj** | VDJ only | Single-cell immune repertoire analysis | [cellranger-vdj]() |
-| **cellranger-atac** | ATAC only | Single-cell chromatin accessibility (ATAC-seq) | [cellranger-atac]() |
-| **cellranger-multi** | GEX + VDJ | Multiome single-cell RNA + VDJ analysis | [cellranger-multi]() |
-| **cellranger-arc** | GEX + ATAC | Multiome single-cell RNA + ATAC analysis | [cellranger-arc]() |
-| **spaceranger** | Visium / HD | Spatial transcriptomics | [spaceranger]() |
-| **rna-seq** | Bulk RNA-seq | Bulk RNA sequencing analysis | [rna-seq]() |
+| **cellranger-vdj** | VDJ only | Single-cell immune repertoire analysis | [cellranger-vdj] |
+| **cellranger-atac** | ATAC only | Single-cell chromatin accessibility (ATAC-seq) | [cellranger-atac] |
+| **cellranger-multi** | GEX + VDJ | Multiome single-cell RNA + VDJ analysis | [cellranger-multi] |
+| **cellranger-arc** | GEX + ATAC | Multiome single-cell RNA + ATAC analysis | [cellranger-arc]|
+| **spaceranger** | Visium / HD | Spatial transcriptomics | [spaceranger] |
+| **rna-seq** | Bulk RNA-seq | Bulk RNA sequencing analysis | [rna-seq] |
 
 ## Other Tutorials
 These cover miscellaneous commands or standalone scripts used in conjunction with the pipelines. Organized by function.
@@ -65,9 +65,9 @@ These cover miscellaneous commands or standalone scripts used in conjunction wit
 ### Transferring files
 | Script | Program/Location? | Tutorial Link |
 | ------------ | ------------ | ------------ |
-| **basespace** | Illumina Basespace| [basespace]() |
-| **aws-cli** | Amazon Web Services (AWS) | [aws-script]() |
-| **ssh-transfer** | Local machine (ssh)| [ssh-transfer]() |
+| **basespace** | Illumina Basespace| [basespace] |
+| **aws-cli** | Amazon Web Services (AWS) | [aws-script] |
+| **scp-transfer** | Local machine (scp)| [scp-transfer](file_transfer/scp_transfer.md) |
 | **10x-cli** | 10X Cloud Analysis | [10x-cli]() |
 
 ### Miscellaneous Notes$
