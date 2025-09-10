@@ -54,11 +54,17 @@ cp /project2/weisenbe_1344/scripts/experiments/cellranger/* .
 ```
 
 **2. Re-write the samplesheet (pulls sample names from fastq file names).**
-- Change `-f1-4` based on number of underscores in fastq sample name before L001_R1_001
-- EXAMPLES:
-   - For `350_L001_R1_001.fastq.gz`, change command to `-f1` because there is one underscore "\_" before L001_R1_001
-   - For `R54_S28_L001_R2_001.fastq.gz`, change command to `-f1-2` because there are two underscores "\_"
-   - For `222_20101169_S9_L001_R1_002.fastq.gz`, change command to `-f1-3` because there are three underscores "\_"
+- The command separates the file name by underscores and separates them into fields. 
+- Change `-f1-4` based on how many fields you want to keep. 
+- EXAMPLE:
+   - For `222_20101169_S9_L001_R1_002.fastq.gz`, the file name will be separated into:
+     - 222
+     - 20101169
+     - S9
+     - L0001
+     - R1
+     - 002
+    - Since the sample name is 222_20101169, the command will be modified to `-f1-2`.
 ```
 # Replace -f1-4 with number of underscores
 
